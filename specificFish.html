@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CPW Invaders Species List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Browser Icon -->
+  <link rel="icon" href="assets/icon.png">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Jquery UI -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- CSS Style sheet -->
+  <link rel="stylesheet" type="text/css" href="index.css"> <!-- css -->
+
+  <style>
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  </style>
+
+
+</head>
+  <body id = "body3" onload="findFish();">
+    <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first: Firebase connection for functionality -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs  for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries firebase optional add on links and functionality-->
+         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+
+    <!-- <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDZkphKGDOGFqEShcoySi39tFB7BtAR0CY",
+        authDomain: "invasive-species-reporter.firebaseapp.com",
+        databaseURL: "https://invasive-species-reporter.firebaseio.com",
+        projectId: "invasive-species-reporter",
+        storageBucket: "invasive-species-reporter.appspot.com",
+        messagingSenderId: "198911272608",
+        appId: "1:198911272608:web:595d186746e2b1f94ccbc5",
+        measurementId: "G-4571BBW3QX"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig); //creating instance of firebase
+      firebase.analytics();
+    </script> -->
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">CPW Invasive Species</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="speciesList.html">Species List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="recentSightings.html">Recent Reports</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a href="reportForm.html" class="btn btn-outline-success my-2 my-sm-0" >Report a sighting</a>
+        </form>
+      </div>
+    </nav>
+
+    <!-- <div class="container">
+      <h1>Species Profile</h1>
+      <div class="card" style="width:500px">
+        <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+        </div>
+      </div> -->
+
+      <!-- <div class="card mb-3">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div> -->
+      <div class="card">
+        <div class="card-body">
+
+          <ul class="list-group">
+            <h3>Species Name: </h3>
+            <li class="list-group-item" id="Species Name">
+              kjlkj
+            </li>
+            <br />
+            <!-- <button type="button" class="btn btn-danger" onclick="display_Name()"> Display my answer</button> -->
+          </ul>
+          <ul class="list-group">
+            <h3>Species Description: </h3>
+            <li class="list-group-item" id="Species Description">
+              kjlkj
+            </li>
+            <br />
+            <!-- <button type="button" class="btn btn-danger" onclick="display_Description()"> Display my answer</button> -->
+          </ul>
+          <ul class="list-group">
+            <h3>Problem: </h3>
+            <li class="list-group-item" id="Problem" >
+              kjlkj
+            </li>
+            <br />
+            <!-- <button type="button" class="btn btn-danger" onclick="display_Problem()"> Display my answer</button> -->
+          </ul>
+          <ul class="list-group">
+            <h3>Water Sheds: </h3>
+            <li class="list-group-item" id="Water Sheds">
+              kjlkj
+            </li>
+            <br />
+            <!-- <button type="button" class="btn btn-danger" onclick="display_waterSheds()"> Display my answer</button> -->
+          </ul>
+        </div>
+        <div id="header"></div>
+
+      </div>
+
+
+
+    <script type="text/javascript" src="index.js"></script>
+
+  </body>
+</html>
