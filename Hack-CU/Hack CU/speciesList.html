@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CPW Invaders Species List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Browser Icon -->
+  <link rel="icon" href="assets/icon.png">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Jquery UI -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- CSS Style sheet -->
+  <link rel="stylesheet" type="text/css" href="index.css"> <!-- css -->
+
+</head>
+  <body id = "body1">
+    <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first: Firebase connection for functionality -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs  for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries firebase optional add on links and functionality-->
+         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+         <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+
+    <!-- Navbar
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top py-3">
+            <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">CPW Invaders Species List</a>
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Gallery</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Portfolio</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">CPW Invasive Species</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="speciesList.html">Species List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="recentSightings.html">Recent Reports</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a href="reportForm.html" class="btn btn-outline-success my-2 my-sm-0" >Report a sighting</a>
+        </form>
+      </div>
+    </nav>
+
+  <!-- <div class = "row"> -->
+    <!-- <div class="container">
+      <div class="card bg-dark text-white">
+
+        <a href="https://www.w3schools.com/html/html_images.asp"> <img class="card-img" src="northernpike.jpg" alt="Card image" > </a> -->
+        <!-- <img class="card-img" src="northernpike.jpg" alt="Card image"> -->
+        <!-- <div class="card-img-overlay">
+          <h5 class="card-title">Northern Pike</h5> -->
+          <!-- <a href="#" class="btn btn-primary">Go to page about Northern Pike</a> -->
+        <!-- </div>
+      </div>
+    </div> -->
+  <!-- </div> -->
+
+  <!-- <div class="container">
+    <div class= "row" >
+
+    <a href="https://www.w3schools.com/html/html_images.asp"> <img class="card-img" src="northernpike.jpg" alt="Card image" style="width:50%;"> </a>
+    <a href="https://www.w3schools.com/html/html_images.asp"> <img class="card-img" src="northernpike.jpg" alt="Card image" style="width:50%;" > </a>
+   </div>
+
+ </div> -->
+ <div class="row">
+  <div class="column">
+    <div class="container">
+      <a > <img src="northernpike.jpg" height="300"> </a>
+      <div class="bottom-left">
+        <button onclick="getNameFromClick('Northern Pike')" type="button" class="btn btn-primary-outline"><h2 style="color:white">Northern Pike</h2></button>
+      </div>
+    </div>
+    <div class="container">
+      <a > <img src="ZebraMussel.jpg" height="300"> </a>
+      <div class="bottom-left">
+        <button onclick="getNameFromClick('Zebra Mussel')" type="button" class="btn btn-primary-outline"><h2 style="color:white">Zebra Mussel</h2></button>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="container">
+      <a  > <img src="YellowPerch.jpg" height="300"> </a>
+      <div class="bottom-left">
+        <button onclick="getNameFromClick('Yellow Perch')" type="button" class="btn btn-primary-outline"><h2 style="color:white">Yellow Perch</h2></button>
+      </div>
+    </div>
+    <div class="container">
+      <a  > <img src="QuaggaMussels.jpg" height="300"> </a>
+      <div class="bottom-left">
+        <button onclick="getNameFromClick('Quagga Mussel')" type="button" class="btn btn-primary-outline"><h2 style="color:white">Quagga Mussel</h2></button>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="container">
+      <a  > <img src="SMB.png" height="300"> </a>
+      <div class="bottom-left">
+        <button onclick="getNameFromClick('Smallmouth Bass')" type="button" class="btn btn-primary-outline"><h2 style="color:white">Smallmouth Bass</h2></button>
+      </div>
+    </div>
+    <div class="container">
+      <a  > <img src="NewZealandMudSnail.png" height="300"> </a>
+      <div class="bottom-left">
+        <button onclick="getNameFromClick('New Zealand Mud Snail')" type="button" class="btn btn-primary-outline"><h2 style="color:white">New Zealand Mud Snail</h2></button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+  <!-- User JavaScript -->
+  <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

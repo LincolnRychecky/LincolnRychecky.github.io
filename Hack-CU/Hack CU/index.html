@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CPW Invaders</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Browser Icon -->
+  <link rel="icon" href="assets/icon.png">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Jquery UI -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- CSS Style sheet -->
+  <link rel="stylesheet" type="text/css" href="index.css"> <!-- css -->
+</head>
+  <body id = "body1">
+    <!-- Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first: Firebase connection for functionality -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs  for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries firebase optional add on links and functionality-->
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">CPW Invasive Species</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="speciesList.html">Species List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="recentSightings.html">Recent Reports</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a href="reportForm.html" class="btn btn-outline-success my-2 my-sm-0" >Report a sighting</a>
+        </form>
+      </div>
+    </nav>
+    <br />
+    <div class = "container">
+      <div class = "row">
+        <div class="col-sm-4">
+          <div class="card-transparent">
+            <div class="card-header" style="background-color: rgba(245, 245,245,0.4)">
+              <h2>What are Invasive Species?</h2>
+            </div>
+            <div class="card-block special-card" style="background-color: rgba(245, 245,245,0.4)">
+              <blockquote class="blockquote mb-0">
+                <p>Invasive species are plants, animals, insects or diseases that are not native to Colorado and have harmful negative effects on the economy and environment. They are introduced accidentally or intentionally outside of their native range. Because they are not native to Colorado habitats, they have no natural competitors or predators. W​ith​​out these checks and balances, the invaders are able to reproduce rapidly and out-compete native species. Invasive species have harmful effects on natural resources and disrupt our use of land and water.</p>
+
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class = "col-sm-4">
+          <div class="card-transparent">
+            <div class="card-header" style="background-color: rgba(245, 245,245,0.4)">
+              <h2>Why Do They Matter?</h2>
+            </div>
+            <div class="card-block special-card" style="background-color: rgba(245, 245,245,0.4)">
+              <blockquote class="blockquote mb-0">
+                <p>Invasive species...​</p>
+                <p>-Damage Colorado's lands and waters</p>
+                <p>-Ruin recreation opportunities</p>
+                <p>-Threaten public health</p>
+                <p>-Damage or impair infrastructure</p>
+                <p>-Damage Colorado's lands and waters</p>
+                <p>-Cost the United States $200 Billion per year</p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class = "col-sm-4">
+          <div class = "imgHolder">
+            <span align = "center">Download our IOS App and report on the go!</span>
+            <img src="app.png" alt="App Screen">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- User JavaScript -->
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
